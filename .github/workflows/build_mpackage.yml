@@ -22,7 +22,7 @@ jobs:
       - name: Cleanup Working Directory
         run: |
           echo $PWD
-          ls src
+          ls -l
           java -jar /app
           ls -l build
 
