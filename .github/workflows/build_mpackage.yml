@@ -20,8 +20,6 @@ jobs:
       - name: Cleanup Working Directory
         run: |
           echo $PWD
-          docker run --pull always --rm -it -u $(id -u):$(id -g) -v $PWD:/$PWD -w /$PWD demonnic/muddler
-          cd build
-          ls -l
-          echo $PWD
+          docker run -T -u $(id -u):$(id -g) -v $PWD:/$PWD -w /$PWD demonnic/muddler
+          ls -l build
 
