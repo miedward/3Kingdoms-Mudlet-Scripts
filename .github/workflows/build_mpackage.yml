@@ -16,10 +16,12 @@ jobs:
   Build:
     needs: Checkout
     runs-on: ubuntu-latest
+    container:
+      image: demonnic/muddler
     steps:
       - name: Cleanup Working Directory
         run: |
           echo $PWD
-          docker run --pull always --rm -u $(id -u):$(id -g) -v $PWD:/$PWD -w /$PWD demonnic/muddler
+          java -jar /app
           ls -l build
 
