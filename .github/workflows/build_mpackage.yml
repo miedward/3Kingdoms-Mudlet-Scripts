@@ -6,20 +6,14 @@ on:
       - main
       - 'releases/**'
 jobs:
-  Checkout:
-    permissions:
-      contents: read
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout github-actions
-        uses: actions/checkout@v3
   Build:
-    needs: Checkout
     runs-on: ubuntu-latest
     container:
       image: demonnic/muddler
     steps:
-      - name: Cleanup Working Directory
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build mpackage
         run: |
           echo $PWD
           ls -l
