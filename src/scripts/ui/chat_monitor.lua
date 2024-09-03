@@ -4,7 +4,8 @@ ThreeKlient.mip = ThreeKlient.mip or {}
 
 ThreeKlient.mip.chatFilter = {
     Gold_Divvy_1 = 'GOLD divvy called',
-    Gold_Divvy_2 = 'All gold divvied'
+    Gold_Divvy_2 = 'All gold divvied',
+    wrap = 'wraps his arms around'
 }
 
 function ThreeKlient.mip.parseChat(chatTable)
