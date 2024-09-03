@@ -15,7 +15,7 @@ function ThreeKlient.mip.parseChat(chatTable)
     -- chatTable[3] is the name of the character who originated the chat
     -- chatTable[4] is the original chat
     for index, value in pairs(ThreeKlient.mip.chatFilter) do
-        if value.find(chatTable[4], value) ~= nil then
+        if chatTable[4] and value.find(chatTable[4], value) ~= nil then
             -- I think this will just ignore the chat
             return
         end
@@ -30,6 +30,12 @@ function ThreeKlient.mip.parseTell(chatTable)
     -- chatTable[1] is either an empty string (incoming tell) or x outgoing tell
     -- chatTable[2] is the target of the tell
     -- chatTable[3] is the content of the tell
+    for index, value in pairs(ThreeKlient.mip.chatFilter) do
+        if chatTable[3] and value.find(chatTable[3], value) ~= nil then
+            -- I think this will just ignore the chat
+            return
+        end
+    end
     if chatTable[1]=="x" then
         chatMonitor:echo("You tell " .. chatTable[2] .. ": " .. chatTable[3].."\n")
     elseif chatTable[1] ~= 'you' then -- weird bug on 3k, get double emote with lower case you target
