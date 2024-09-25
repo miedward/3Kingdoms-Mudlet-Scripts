@@ -56,3 +56,6 @@ stepperBot.badmobs = { "ron", "broodling", "storm servant", "valithyn",
     "phr", "queen's elite guardswoman", "princess qi", "alphabet serial killer",
     "cleric of lathander", "support mech", "truck named", "jeep named" }
 Currently this is mine and it is hard coded so that's not ideal.  Making this more user friendly is high on my todo list.
+
+This is a test.
+
