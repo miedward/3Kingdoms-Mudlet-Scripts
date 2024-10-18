@@ -9,6 +9,13 @@
        {
               "isActive": "yes",
               "isFolder": "no",
+              "name": "suitup",
+              "regex": "^suitup$",
+              "script": ""
+       },
+       {
+              "isActive": "yes",
+              "isFolder": "no",
               "name": "infest corpses",
               "regex": "/inf (.*)",
               "script": ""
