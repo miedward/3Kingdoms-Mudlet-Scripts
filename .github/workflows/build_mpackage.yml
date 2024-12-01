@@ -17,6 +17,10 @@ jobs:
         uses: demonnic/build-with-muddler@v1.4
         with:
           workingDir: ${{ github.workspace }}/siibot3k
+      - name: Muddle Farming
+        uses: demonnic/build-with-muddler@v1.4
+        with:
+          workingDir: ${{ github.workspace }}/farming3k
       - name: Publish mpackage to Releases
         id: publish
         uses: softprops/action-gh-release@v2
@@ -32,3 +36,4 @@ jobs:
           files: |
             build/3Klient.mpackage
             siibot3k/build/siibot3k.mpackage
+            farming3k/build/Farming3k.mpackage
