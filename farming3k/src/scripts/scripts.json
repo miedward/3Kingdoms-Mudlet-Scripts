@@ -1,0 +1,32 @@
+[
+       {
+              "isActive": "yes",
+              "isFolder": "no",
+              "name": "Plant",
+              "script": ""
+       },
+       {
+              "isActive": "yes",
+              "isFolder": "no",
+              "name": "Farm",
+              "script": ""
+       },
+       {
+              "isActive": "yes",
+              "isFolder": "no",
+              "name": "red pepper",
+              "script": ""
+       },
+       {
+              "isActive": "yes",
+              "isFolder": "no",
+              "name": "white potato",
+              "script": ""
+       },
+       {
+              "isActive": "yes",
+              "isFolder": "no",
+              "name": "broccoli",
+              "script": ""
+       }
+]

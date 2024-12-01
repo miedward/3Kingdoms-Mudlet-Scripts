@@ -1,0 +1,9 @@
+[
+       {
+              "isActive": "yes",
+              "isFolder": "no",
+              "name": "farm",
+              "regex": "^farm $",
+              "script": ""
+       }
+]

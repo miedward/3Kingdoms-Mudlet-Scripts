@@ -1,0 +1,10 @@
+{
+       "package": "Farming3k",
+       "title": "Scripts for 3Kingdoms Farming functionality",
+       "description": "",
+       "version": "",
+       "author": "Mike Edwards",
+       "icon": "",
+       "dependencies": "",
+       "outputFile": false
+}
