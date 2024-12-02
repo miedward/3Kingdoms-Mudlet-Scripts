@@ -5,5 +5,12 @@
               "name": "farm",
               "regex": "^farm (.*)",
               "script": ""
+       },
+       {
+              "isActive": "yes",
+              "isFolder": "no",
+              "name": "buysupplies",
+              "regex": "^buysupplies (.*)",
+              "script": ""
        }
 ]

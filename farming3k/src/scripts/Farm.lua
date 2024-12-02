@@ -2,7 +2,7 @@ Farm = {}
 Farm.plant = "none"
 Farm.time = 0
 
-function BuySupplies(win)
+function Farm:BuySupplies(win)
 	local buy = "n"
 	if win == 1 then
   		buy = "y"

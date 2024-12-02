@@ -26,13 +26,72 @@ end
 
 -- Define the harvest function
 function Plant:harvest()
-    if self.stage == "mature" then
-        print(self.name .. " is harvested.")
-        self.stage = "harvested"
-    else
-        print(self.name .. " cannot be harvested yet.")
-    end
+    send("get all")
+    send("stash all")
 end
+
+local function sne(stuff)
+    send(stuff)
+end
+
+function Plant:aerate(what, Units)
+    local amt, sub
+    while Units > 0 do
+       amt, sub = Calc_amount(Units)
+       sne(string.format("aerate %s %s", amt, what))
+       Units = Units - sub
+    end
+  end
+  
+  function Plant:fertilize(what, Units)
+    local amt, sub
+    while Units > 0 do
+       amt, sub = Calc_amount(Units)
+       sne(string.format("fertilize %s %s", amt, what))
+       Units = Units - sub
+    end
+  end
+  
+  function Plant:spread(what, Units)
+    local amt, sub
+    while Units > 0 do
+       amt, sub = Calc_amount(Units)
+       sne(string.format("spread %s %s", amt, what))
+       Units = Units - sub
+    end
+  end
+  
+  function Plant:spray(what, Units)
+    local amt, sub
+    while Units > 0 do
+       amt, sub = Calc_amount(Units)
+       sne(string.format("spray %s %s", amt, what))
+       Units = Units - sub
+    end
+  end
+  
+  function Plant:water(what, Units)
+    local amt, sub
+    while Units > 0 do
+       amt, sub = Calc_amount(Units)
+       sne(string.format("water %s %s", amt, what	))
+       Units = Units - sub
+    end
+  end
+  
+  function Calc_amount(Units)
+    if Units >= 35 then
+      return "lots", 35
+    elseif Units >= 20 then
+      return "some", 20
+    elseif Units == 10 then
+      return "little", 10
+    else 
+      echo("!!!!!!!!!Less than 10 units, using little.!!!!!!!!!")
+      return "little", 10
+    end
+  end
+
 
 -- Create a table of plants
 plants = {}
