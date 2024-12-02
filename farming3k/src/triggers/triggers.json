@@ -43,6 +43,10 @@
                      {
                             "pattern": "^The spindly leaves of the (.*) plant come together in applause",
                             "type": "regex"
+                     },
+                     {
+                            "pattern": "^The plant shivers, nudges, and moves its leaves into its final position",
+                            "type": "regex"
                      }
               ],
               "script": ""
