@@ -13,15 +13,20 @@ end
 -- Define the start function
 function Plant:start()
     print(self.name .. " has started growing as a sprout.")
+    send("exa ground")
+    send("exa insects")
+    send("exa mushrooms")
+    send("exa weeds")
+    send("glance")
 end
 
 -- Define the grow function
 function Plant:grow()
-    if self.health >= 25 then
-        echo(self.name .. " is healthy.")
-    else
-        echo(self.name .. " is dying.")
-    end
+    send("exa ground")
+    send("exa insects")
+    send("exa mushrooms")
+    send("exa weeds")
+    send("glance")
 end
 
 -- Define the harvest function
@@ -31,15 +36,11 @@ function Plant:harvest()
     send("stash all")
 end
 
-local function sne(stuff)
-    send(stuff)
-end
-
 function Plant:aerate(what, Units)
     local amt, sub
     while Units > 0 do
        amt, sub = Calc_amount(Units)
-       sne(string.format("aerate %s %s", amt, what))
+       send(string.format("aerate %s %s", amt, what))
        Units = Units - sub
     end
   end
@@ -48,7 +49,7 @@ function Plant:aerate(what, Units)
     local amt, sub
     while Units > 0 do
        amt, sub = Calc_amount(Units)
-       sne(string.format("fertilize %s %s", amt, what))
+       send(string.format("fertilize %s %s", amt, what))
        Units = Units - sub
     end
   end
@@ -57,7 +58,7 @@ function Plant:aerate(what, Units)
     local amt, sub
     while Units > 0 do
        amt, sub = Calc_amount(Units)
-       sne(string.format("spread %s %s", amt, what))
+       send(string.format("spread %s %s", amt, what))
        Units = Units - sub
     end
   end
@@ -66,7 +67,7 @@ function Plant:aerate(what, Units)
     local amt, sub
     while Units > 0 do
        amt, sub = Calc_amount(Units)
-       sne(string.format("spray %s %s", amt, what))
+       send(string.format("spray %s %s", amt, what))
        Units = Units - sub
     end
   end
@@ -75,7 +76,7 @@ function Plant:aerate(what, Units)
     local amt, sub
     while Units > 0 do
        amt, sub = Calc_amount(Units)
-       sne(string.format("water %s %s", amt, what	))
+       send(string.format("water %s %s", amt, what	))
        Units = Units - sub
     end
   end
@@ -88,7 +89,6 @@ function Plant:aerate(what, Units)
     elseif Units == 10 then
       return "little", 10
     else 
-      echo("!!!!!!!!!Less than 10 units, using little.!!!!!!!!!")
       return "little", 10
     end
   end
