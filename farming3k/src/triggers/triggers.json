@@ -35,6 +35,14 @@
                      {
                             "pattern": "^... and just like that, the plant is now ready to harvest!",
                             "type": "regex"
+                     },
+                     {
+                            "pattern": "^With the tinkling of a bell, the (.*) plant presents itself",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The spindly leaves of the (.*) plant come together in applause",
+                            "type": "regex"
                      }
               ],
               "script": ""
