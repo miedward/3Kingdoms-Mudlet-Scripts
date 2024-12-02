@@ -13,7 +13,27 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The plant has grown (\\d+) of its ideal growth.",
+                            "pattern": "^The plant has grown (\\d+)% of its ideal growth.",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "harvest",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "yes",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^... and just like that, the plant is now ready to harvest!",
                             "type": "regex"
                      }
               ],

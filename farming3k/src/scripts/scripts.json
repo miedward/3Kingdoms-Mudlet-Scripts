@@ -28,5 +28,23 @@
               "isFolder": "no",
               "name": "broccoli",
               "script": ""
+       },
+       {
+              "isActive": "yes",
+              "isFolder": "no",
+              "name": "beefsteak tomato",
+              "script": ""
+       },
+       {
+              "isActive": "yes",
+              "isFolder": "no",
+              "name": "yellow bean",
+              "script": ""
+       },
+       {
+              "isActive": "yes",
+              "isFolder": "no",
+              "name": "mcintosh apple",
+              "script": ""
        }
 ]
