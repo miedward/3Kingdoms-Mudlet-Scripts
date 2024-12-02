@@ -18,14 +18,15 @@ end
 -- Define the grow function
 function Plant:grow()
     if self.health >= 25 then
-        print(self.name .. " is healthy.")
+        echo(self.name .. " is healthy.")
     else
-        print(self.name .. " is dying.")
+        echo(self.name .. " is dying.")
     end
 end
 
 -- Define the harvest function
 function Plant:harvest()
+    send("harvest plant")
     send("get all")
     send("stash all")
 end
