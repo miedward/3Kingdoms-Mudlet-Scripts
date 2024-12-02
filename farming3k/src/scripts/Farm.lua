@@ -4,6 +4,7 @@ Farm.time = 0
 
 function Farm:BuySupplies(win)
 	local buy = "n"
+    win = tonumber(win)
 	if win == 1 then
   		buy = "y"
 		send("buy A simple type I contristometer")
