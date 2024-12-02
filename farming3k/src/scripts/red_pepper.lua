@@ -1,11 +1,11 @@
 
 -- Custom grow function for the red pepper
 local function customRedPepperStart(self)
-    self:fertilize("Hippie fertilizer",35)
+    Plant:fertilize("Hippie fertilizer",35)
 end
 
 local function customRedPepperGrow(self)
-    fertilize("Hippie fertilizer",40)
+    Plant:fertilize("Hippie fertilizer",40)
 end
 
 -- Add instances of Plant to the table

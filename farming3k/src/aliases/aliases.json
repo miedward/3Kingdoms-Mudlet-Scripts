@@ -3,7 +3,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "name": "farm",
-              "regex": "^farm $",
+              "regex": "^farm (.*)",
               "script": ""
        }
 ]

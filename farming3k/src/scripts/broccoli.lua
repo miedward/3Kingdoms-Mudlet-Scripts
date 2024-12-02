@@ -1,10 +1,10 @@
 -- Custom grow function for the broccoli
 local function customBroccoliStart(self)
-    self:fertilize("Hippie fertilizer",105)
+    Plant:fertilize("Hippie fertilizer",105)
 end
 
 local function customBroccoliGrow(self)
-    self:fertilize("Hippie fertilizer",105)
+    Plant:fertilize("Hippie fertilizer",105)
 end
 
 -- Add instances of Plant to the table

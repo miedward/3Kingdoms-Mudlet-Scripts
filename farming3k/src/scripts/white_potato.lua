@@ -1,12 +1,12 @@
 -- Custom grow function for the white potato
 local function customWhitePotatoStart(self)
-    self:fertilize("Hippie fertilizer",35)
-    self:water("wayhaven water",35)
+    Plant:fertilize("Hippie fertilizer",35)
+    Plant:water("wayhaven water",35)
 end
 
 local function customWhitePotatoGrow(self)
-    self:fertilize("Hippie fertilizer",20)
-    self:water("wayhaven water",20)
+    Plant:fertilize("Hippie fertilizer",20)
+    Plant:water("wayhaven water",20)
 end
 
 -- Add instances of Plant to the table
