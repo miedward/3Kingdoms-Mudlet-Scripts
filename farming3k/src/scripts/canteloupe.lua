@@ -6,7 +6,7 @@ local function customCanteloupeStart(self)
 end
 
 local function customCanteloupeGrow(self)
-    if (farm.time == 1) then
+    if (Farm.time == 1) then
         Plant:water("wayhaven water",35)
         Plant:fertilize("Happy Ed's fertilizer",35)
         Plant:fertilize("Hippie fertilizer",20)

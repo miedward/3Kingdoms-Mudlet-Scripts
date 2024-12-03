@@ -1,6 +1,6 @@
 [
        {
-              "name": "farming round",
+              "name": "farming mskill",
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
@@ -14,6 +14,190 @@
               "patterns": [
                      {
                             "pattern": "^The plant has grown (\\d+)% of its ideal growth.",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "farming growth",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "yes",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The .* flowers pop and rattle as they are hauled",
+                            "type": "regex"
+                     },{
+                            "pattern": "^With a triumphant scream, the .* plant explodes",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The .* plant screams in delight",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The faint smell of soap and cumin rises to your nose",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The roots of the .* plant plungs into the ground",
+                            "type": "regex"
+                     },{
+                            "pattern": "^With a shift to the left, and a shift to the right,",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The .* plan sighs tremendously, as if it was",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The smell of burnt bone marrow overwhelms you as",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The roots of the .* plant tear up the ground",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The .* plant spins in a torrent, moving skyward",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The roots of the .* plant spiral up around",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The roots of the .* plant disappear deep into the ground",
+                            "type": "regex"
+                     },{
+                            "pattern": "^Soil flies in every direction as the .* plant races",
+                            "type": "regex"
+                     },{
+                            "pattern": "^As in a nature documentary, the .* leaves grow right",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The smell of angel wing feathers fills your soul as the",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The scent of wildflowers and oak wine barrels fills",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The .* plant ascends vertically into the blue sky",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The smell of rotted lilacs showers you as the",
+                            "type": "regex"
+                     },{
+                            "pattern": "^With a shriek of delight, the .* plant dances",
+                            "type": "regex"
+                     },{
+                            "pattern": "^With a pop, a twirl, and a sweet little coo",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The .* leaves coil around itself clockwise",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The .* roots launch themselves skywards to drive",
+                            "type": "regex"
+                     },{
+                            "pattern": "^A massive explosion knocks you back as the",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The sound of children laughing comes from the leaves",
+                            "type": "regex"
+                     },{
+                            "pattern": "^A tri-harmonic sound blasts in your ears as the",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The .* plant dances a slow, luxurious dance high",
+                            "type": "regex"
+                     },{
+                            "pattern": "^With leaves all-aquiver, the .* plant undergoes",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The smell of burnt bone marrow overwhelms you as",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The .* plant's leaves buffet you with wind",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The .* plant gives a little cough, and moves",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The roots of the .* plant reach downward, and grasp",
+                            "type": "regex"
+                     },{
+                            "pattern": "^Leaving no trace of its former self behind it",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The .* plant shrugs its leaves as it sends it",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },{
+              "name": "farming neutral",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "yes",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^A spinning noise is heard as the .* plant constricts",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The leaves of the plant pull back from your reach as the",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The roots of the .* plant reach deep into the ground,",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The .* plant squiggles and niggles, but",
+                            "type": "regex"
+                     },{
+                            "pattern": "^With a stench like oozing foot sores",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The leaves of the .* plant shrug upwards, as if asking",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },{
+              "name": "farming dying",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "yes",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The .* plant heaves upwards momentarily, only to sink",
+                            "type": "regex"
+                     },{
+                            "pattern": "^A cough emanates from the .* plant as it wastes away",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The .* plant shivers right before your eyes",
+                            "type": "regex"
+                     },{
+                            "pattern": "^The roots of the .* plant shrink up around the stem",
+                            "type": "regex"
+                     },{
+                            "pattern": "^With a slump, the .* plant shrinks right before",
+                            "type": "regex"
+                     },{
+                            "pattern": "^With a slump, the .* plant shrinks right before",
                             "type": "regex"
                      }
               ],
