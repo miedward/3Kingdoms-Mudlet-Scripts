@@ -2,6 +2,13 @@
        {
               "isActive": "yes",
               "isFolder": "no",
+              "name": "autofarm",
+              "regex": "^farm$",
+              "script": ""
+       },
+       {
+              "isActive": "yes",
+              "isFolder": "no",
               "name": "farm",
               "regex": "^farm (.*)",
               "script": ""
