@@ -221,11 +221,11 @@
                             "type": "regex"
                      },
                      {
-                            "pattern": "^With the tinkling of a bell, the (.*) plant presents itself",
+                            "pattern": "^With the tinkling of a bell, the (.*) plant presents",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^The spindly leaves of the (.*) plant come together in applause",
+                            "pattern": "^The spindly leaves of the (.*) plant come together in",
                             "type": "regex"
                      },
                      {
