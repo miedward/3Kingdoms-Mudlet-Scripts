@@ -391,16 +391,30 @@ function stepperBot.onExit()
   saveWindowLayout()
 end
 
-if stepperBot.handlerID.onExit then killAnonymousEventHandler(stepperBot.handlerID.onExit) end
+if stepperBot.handlerID.onExit then 
+  killAnonymousEventHandler(stepperBot.handlerID.onExit)
+  stepperBot.handlerID.onExit = nil
+end
 stepperBot.handlerID.onExit = registerAnonymousEventHandler("sysExitEvent", stepperBot.onExit)
-if stepperBot.handlerID.onDisconnect then killAnonymousEventHandler(stepperBot.handlerID.onDisconnect) end
+if stepperBot.handlerID.onDisconnect then
+  killAnonymousEventHandler(stepperBot.handlerID.onDisconnect)
+  stepperBot.handlerID.onDisconnect = nil
+end
 stepperBot.handlerID.onDisconnect = registerAnonymousEventHandler("sysDisconnectionEvent", stepperBot.onExit)
-if stepperBot.handlerID.walkerKillingBlow then killAnonymousEventHandler(stepperBot.handlerID.walkerKillingBlow) end
+if stepperBot.handlerID.walkerKillingBlow then 
+  killAnonymousEventHandler(stepperBot.handlerID.walkerKillingBlow)
+  stepperBot.handlerID.walkerKillingBlow = nil
+end
 stepperBot.handlerID.walkerKillingBlow = registerAnonymousEventHandler("walkerKillingBlow", "walker_kb")
-if stepperBot.handlerID.walkerKill then killAnonymousEventHandler(stepperBot.handlerID.walkerKill) end
+if stepperBot.handlerID.walkerKill then 
+  killAnonymousEventHandler(stepperBot.handlerID.walkerKill) 
+  stepperBot.handlerID.walkerKill = nil
+end
 stepperBot.handlerID.walkerKill = registerAnonymousEventHandler("walkerKill", "walker_kill")
-if stepperBot.handlerID.walkerPaul then killAnonymousEventHandler(stepperBot.handlerID.walkerPaul) end
-stepperBot.handlerID.walkerPaul = registerAnonymousEventHandler("walkerPaul", "paul_walker")
-if stepperBot.handlerID.walkerStep then killAnonymousEventHandler(stepperBot.handlerID.walkerStep) end
+registerNamedEventHandler("walker events", "walker event 1", "walkerPaul", "paul_walker")
+if stepperBot.handlerID.walkerStep then
+  killAnonymousEventHandler(stepperBot.handlerID.walkerStep)
+  stepperBot.handlerID.walkerStep = nil
+end
 stepperBot.handlerID.walkerStep = registerAnonymousEventHandler("walkerStep", "walker_step")
 
