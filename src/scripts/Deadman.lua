@@ -16,4 +16,10 @@ local function deadManEvent(eventName, commandSent)
     -- echo("Deadman not reset\n")
   end
 end
-registerNamedEventHandler("hsima", "deadman", "sysDataSendRequest", deadManEvent)
+local charName = "hsima"
+charName = getCharacterName()
+if charName then
+  registerNamedEventHandler(charName, "deadman", "sysDataSendRequest", deadManEvent)
+else
+  registerNamedEventHandler("hsima", "deadman", "sysDataSendRequest", deadManEvent)
+end

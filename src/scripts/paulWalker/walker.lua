@@ -283,6 +283,7 @@ function walkerEcho(s)
 end
 
 function paul_walker()
+  cecho(C_WALKPRE .. "Paul is walking.\n")
   if (walker_active and #walker_mobs > 0 and walker_roomPlayers == 0) then
     cecho(C_WALKPRE .. "Stopping to fight mobs(" .. #walker_mobs..").\n")
     raiseEvent("walkerKill", walker_mobs[1])
@@ -390,31 +391,19 @@ function stepperBot.onExit()
   expandAlias("/stop")
   saveWindowLayout()
 end
+local charName = "hsima"
+charName = getCharacterName()
+if not charName or charName == "" then
+  charName = "hsima"
+end
 
-if stepperBot.handlerID.onExit then 
-  killAnonymousEventHandler(stepperBot.handlerID.onExit)
-  stepperBot.handlerID.onExit = nil
+function stepperBot.onProfileLoad()
+  registerNamedEventHandler(charName, "stepperBot.onExit", "sysExitEvent", stepperBot.onExit)
+  registerNamedEventHandler(charName, "stepperBot.onDisconnect", "sysDisconnectionEvent", stepperBot.onExit)
+  registerNamedEventHandler(charName, "stepperBot.walkerKillingBlow", "walkerKillingBlow", walker_kb)
+  registerNamedEventHandler(charName, "stepperBot.walkerKill", "walkerKill", walker_kill)
+  registerNamedEventHandler(charName, "stepperBot.walkerPaul", "walkerPaul", paul_walker)
+  registerNamedEventHandler(charName, "stepperBot.walkerStep", "walkerStep", walker_step)
 end
-stepperBot.handlerID.onExit = registerAnonymousEventHandler("sysExitEvent", stepperBot.onExit)
-if stepperBot.handlerID.onDisconnect then
-  killAnonymousEventHandler(stepperBot.handlerID.onDisconnect)
-  stepperBot.handlerID.onDisconnect = nil
-end
-stepperBot.handlerID.onDisconnect = registerAnonymousEventHandler("sysDisconnectionEvent", stepperBot.onExit)
-if stepperBot.handlerID.walkerKillingBlow then 
-  killAnonymousEventHandler(stepperBot.handlerID.walkerKillingBlow)
-  stepperBot.handlerID.walkerKillingBlow = nil
-end
-stepperBot.handlerID.walkerKillingBlow = registerAnonymousEventHandler("walkerKillingBlow", "walker_kb")
-if stepperBot.handlerID.walkerKill then 
-  killAnonymousEventHandler(stepperBot.handlerID.walkerKill) 
-  stepperBot.handlerID.walkerKill = nil
-end
-stepperBot.handlerID.walkerKill = registerAnonymousEventHandler("walkerKill", "walker_kill")
-registerNamedEventHandler("walker events", "walker event 1", "walkerPaul", "paul_walker")
-if stepperBot.handlerID.walkerStep then
-  killAnonymousEventHandler(stepperBot.handlerID.walkerStep)
-  stepperBot.handlerID.walkerStep = nil
-end
-stepperBot.handlerID.walkerStep = registerAnonymousEventHandler("walkerStep", "walker_step")
-
+registerNamedEventHandler(charName, "stepperBot.onProfileLoad", "sysLoadEvent", stepperBot.onProfileLoad)
+registerNamedEventHandler(charName, "stepperBot.onConnectionEvent", "sysConnectionEvent", stepperBot.onProfileLoad)

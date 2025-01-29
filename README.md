@@ -56,3 +56,7 @@ stepperBot.badmobs = { "ron", "broodling", "storm servant", "valithyn",
     "phr", "queen's elite guardswoman", "princess qi", "alphabet serial killer",
     "cleric of lathander", "support mech", "truck named", "jeep named" }
 Currently this is mine and it is hard coded so that's not ideal.  Making this more user friendly is high on my todo list.
+
+As of mudlet 4.19.1 I am seeing an issue when I reconnect to 3k where a lot of things stop working. Easy fix is to "close profile" and then open again.  If you install dumbFudge.xml with the package manager it will fix the things I noticed not working after reconnect (stepper and chat monitor).  If there are other things you notice, please open an issue and I'll see what I can do.  Working with the mudlet team to figure out what is causing the odd behavior.
+
+Oh, and if you include dumbFudge in the 3klient package it doesn't work.  It's odd.
