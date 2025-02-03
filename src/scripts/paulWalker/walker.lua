@@ -283,7 +283,7 @@ function walkerEcho(s)
 end
 
 function paul_walker()
-  cecho(C_WALKPRE .. "Paul is walking.\n")
+  -- cecho(C_WALKPRE .. "Paul is walking.\n")
   if (walker_active and #walker_mobs > 0 and walker_roomPlayers == 0) then
     cecho(C_WALKPRE .. "Stopping to fight mobs(" .. #walker_mobs..").\n")
     raiseEvent("walkerKill", walker_mobs[1])
@@ -405,5 +405,7 @@ function stepperBot.onProfileLoad()
   registerNamedEventHandler(charName, "stepperBot.walkerPaul", "walkerPaul", paul_walker)
   registerNamedEventHandler(charName, "stepperBot.walkerStep", "walkerStep", walker_step)
 end
+
+registerNamedEventHandler(ThreeKlient.config.user, "stepperBot.onInstall", "sysInstall", stepperBot.onProfileLoad)
 registerNamedEventHandler(charName, "stepperBot.onProfileLoad", "sysLoadEvent", stepperBot.onProfileLoad)
 registerNamedEventHandler(charName, "stepperBot.onConnectionEvent", "sysConnectionEvent", stepperBot.onProfileLoad)

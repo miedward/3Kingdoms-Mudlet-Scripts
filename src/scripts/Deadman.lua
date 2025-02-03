@@ -1,5 +1,6 @@
 local MINUTES = 60
-deadmanStatus = true
+Deadman = Deadman or {}
+
 local function resetDeadMan()
   deadmanStatus = true
     -- echo("Deadman reset\n")
@@ -16,10 +17,15 @@ local function deadManEvent(eventName, commandSent)
     -- echo("Deadman not reset\n")
   end
 end
-local charName = "hsima"
-charName = getCharacterName()
-if charName then
-  registerNamedEventHandler(charName, "deadman", "sysDataSendRequest", deadManEvent)
-else
-  registerNamedEventHandler("hsima", "deadman", "sysDataSendRequest", deadManEvent)
+function Deadman.registerHandlers()
+  local charName = "hsima"
+  charName = getCharacterName()
+  if charName then
+    registerNamedEventHandler(charName, "deadman", "sysDataSendRequest", deadManEvent)
+  else
+    registerNamedEventHandler("hsima", "deadman", "sysDataSendRequest", deadManEvent)
+  end
 end
+
+Deadman.registerHandlers()
+deadmanStatus = true
