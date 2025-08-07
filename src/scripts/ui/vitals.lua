@@ -20,19 +20,25 @@ local function doColor(gline)
 end
 
 local function getGaugeCss(backgroundColor)
-	local res = f[[
-		background-color: {backgroundColor};
-		border-style: solid;
-		border-color: white;
-		border-width: 1px;
-		border-radius: 5px;
-		margin: 5px;
-	]]
-	return res
+  return string.format([[
+    background-color: %s;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 5px;
+    margin: 5px;
+  ]], backgroundColor)
 end
+
 
 local function setFontSize(fontSize)
   ThreeKlient.ui.fontSize = fontSize
+
+  if not ThreeKlient.ui.gaugeContainers then
+    cecho("<red>Gauge containers are not initialized!<reset>\n")
+    return
+  end
+
   for name, _ in pairs(ThreeKlient.ui.gaugeContainers) do
     local gauge = ThreeKlient.ui.gauges[name]
     if gauge then
@@ -41,8 +47,19 @@ local function setFontSize(fontSize)
   end
 end
 
+
 function ThreeKlient.ui.setupVitals()
+  if not ThreeKlient.ui then
+    cecho("<red>ThreeKlient.ui is not defined!<reset>\n")
+    return
+  end
+
   local ui = ThreeKlient.ui
+  if not ui.vitalsContainer then
+    cecho("<red>Vitals container is missing!<reset>\n")
+    return
+  end
+
   ui.vitalsHBox = ui.vitalsHBox or Geyser.HBox:new({
     name = "vitalsHBox",
     x = 0,
@@ -173,6 +190,10 @@ local function updateVital(vitalType, currentValue, maxValue, name)
 end
 
 function ThreeKlient.ui.onVitalsUpdate()
+  if not ThreeKlient.mip or not ThreeKlient.mip.vitals then
+    cecho("<red>Vitals data is missing!<reset>\n")
+    return
+  end
   local vitals = ThreeKlient.mip.vitals
   if vitals.uptime and vitals.reboot and vitals.mudlag then
     local title = "Uptime " .. vitals.uptime .. " Reboot in " .. vitals.reboot .. " (Mudlag " .. vitals.mudlag ..")"
