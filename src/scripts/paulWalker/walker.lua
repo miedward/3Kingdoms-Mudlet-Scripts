@@ -380,6 +380,7 @@ function walker_kill(event, mob)
     vampire = "vampire$",
     branch = "branch$",
     guard = "guard$",
+    guardian = "guardian$"
     crocodile = "crocodile$",
     swamphen = "swamphen$",
     amphiuma = "amphiuma$",
@@ -415,7 +416,14 @@ function walker_kill(event, mob)
 	soldier = 'soldier',
 	chinchilla = 'chinchilla',
 	letter = 'letter',
-	gun = 'gun'
+	gun = 'gun',
+	deva = 'deva',
+	druid = 'druid',
+	sage = 'sage',
+	lama = 'lama',
+	shaman = 'shaman',
+	sw = 'warrior',
+	knight = 'knight'
   }
 
   cecho(C_WALKPRE .. "Trying to attack:"..mob.."!")
