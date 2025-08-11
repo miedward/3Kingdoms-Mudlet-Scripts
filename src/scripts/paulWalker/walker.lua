@@ -381,7 +381,7 @@ function walker_kill(event, mob)
     vampire = "vampire$",
     branch = "branch$",
     guard = "guard$",
-    guardian = "guardian$"
+    guardian = "guardian$",
     crocodile = "crocodile$",
     swamphen = "swamphen$",
     amphiuma = "amphiuma$",
