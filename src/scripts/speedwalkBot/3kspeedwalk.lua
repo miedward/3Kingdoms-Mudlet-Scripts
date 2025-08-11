@@ -53,9 +53,9 @@ speedwalkBot.paths["frompol2"] = speedwalkBot.paths["frompol"]
 speedwalkBot.paths["frompol3"] = speedwalkBot.paths["frompol"]
 speedwalkBot.paths["tobrigands"] = {"portal wforest", "1nw ne 2w n 2ne 3n 2e 3n 2nw 2n 2e s e n"}
 speedwalkBot.paths["frombrigands"] = {"1s w n 2w 2s 2se 3s 2w 3s 2sw s 2e sw se", "portal"}
-walkBot.paths["tozodiac"] = {"leave", "7w", "portal"}
-speedwalkBot.paths["fromzodiac"] = {"portal", "2w 4n 5e", "portal"}
-speed
+speedwalkBot.paths["tozodiac"] = {"portal", "15e", "leave", "4e ne ne n ne ne 10e", "step through", "dungeons clear all"}}
+speedwalkBot.paths["fromzodiac"] = {"leave", "7w", "portal"}
+
 --Sci
 speedwalkBot.paths["tomammon"] = {"enter", "1u 4n d 6n", "path"}
 speedwalkBot.paths["frommammon"] = {"path", "6s u 4s d", "out"}
