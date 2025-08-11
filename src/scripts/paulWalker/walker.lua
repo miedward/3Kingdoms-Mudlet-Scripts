@@ -25,7 +25,8 @@ stepperBot.badmobs = { "ron", "broodling", "storm servant", "valithyn",
     "sugger support mech", "permit officer", "vampire", "asp caterpillar",
     "bunyip", "three headed", "droid", "puddle of slime", "squire", 
     "phr", "queen's elite guardswoman", "princess qi", "alphabet serial killer",
-    "cleric of lathander", "support mech", "truck named", "jeep named" }
+    "cleric of lathander", "support mech", "truck named", "jeep named",
+    "shadowbound follower" }
 
 stepperBot.paths["none"] = {}
 stepperBot.paths["zodiac"] = {"e", "se", "s", "se", "s", 
