@@ -422,7 +422,7 @@ function walker_kill(event, mob)
 	sage = 'sage',
 	lama = 'lama',
 	shaman = 'shaman',
-	sw = 'warrior',
+	warrior = 'warrior',
 	knight = 'knight'
   }
 
